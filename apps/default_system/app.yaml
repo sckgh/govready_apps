@@ -12,9 +12,7 @@ catalog:
   category: Draft
   description:
     long: >
-      Edit this Markdown file to provide a long description of your compliance app.
-      The contents of this file will be displayed in the GovReady-Q Compliance Apps
-      Catalog.
+      A system to ensure that you can meet ISM compliance with minimum fuss
     short: A system for ISM compliance
   source_url: ~
   status: stub
@@ -23,11 +21,15 @@ catalog:
   vendor_url: ~
   version: 0.1.0
 questions:
-- id: register
-  title: System Registration
-  type: module
-  module-id: register
-- id: assess
-  title: Assess System
-  type: module
-  module-id: assess
+  - id: register
+    title: System Registration
+    type: module
+    module-id: register
+  - id: assess
+    title: Assess System
+    type: module
+    module-id: assess
+  - id: authorise
+    title: authorise System
+    type: module
+    module-id: authorise
