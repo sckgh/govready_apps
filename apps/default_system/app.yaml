@@ -1,4 +1,27 @@
 # holder for app
-description:
-  short: |
-    Use this if you are bulding a system from scratch
+id: default_system
+title: Default System
+type: project
+#icon: app.png # refers to file in app's assets directory
+catalog:
+  categories:
+    - Category Name
+    - Another category name
+  vendor: skeogh
+  status: Operational
+  version: 0.1
+  version-name: First Release
+  source_url: https://github.com/sckgh/govready_apps
+  description:
+    short: |
+      Use this if you are bulding a system from scratch
+questions:
+- id: q1
+  title: Communications Security?
+  prompt: Are you using your own cabling?
+  type: choice
+  choices:
+    - key: true
+      text: Yes
+    - key: false
+      text: True
