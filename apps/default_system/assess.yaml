@@ -1,0 +1,38 @@
+id: assess
+title: assess System
+output:
+- format: markdown
+  title: What You Chose
+  template: '{{q1}}'
+questions:
+- id: q1
+  title: Built Infrastructure
+  prompt: |-
+    Have you built your own physical infrstructure for this system?
+    This includes
+    * cabling
+  type: yesno
+- id: q2
+  title: Environment
+  prompt: Enter some text.
+  type: choice
+  choices:
+  - key: UC
+    text: Utiltity Cloud
+  - key: AIVE
+    text: AIVE
+  - key: Custom
+    text: Custom
+- id: q3
+  title: Cable Colouring
+  prompt: |-
+    Does your cabling follow the following standard?
+    |Classification|Colour|
+    |Official, Official : Sensitive|Black,Grey|
+    |PROTECTED|Blue|
+    |SECRET|Pink|
+    |TOP SECRET|Red|
+  type: yesno
+  impute:
+  - condition: q1 == no
+    value: Doesn't Apply
