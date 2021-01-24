@@ -1,27 +1,33 @@
 # holder for app
 id: default_system
-title: Default System
+title: Default System app
 type: project
-#icon: app.png # refers to file in app's assets directory
+version: 0.1.0
+icon: app.png
+introduction:
+  format: markdown
+  template: |
+    Use this app to achieve ISM compliance.
 catalog:
-  categories:
-    - Category Name
-    - Another category name
-  vendor: skeogh
-  status: Operational
-  version: 0.1
-  version-name: First Release
-  source_url: https://github.com/sckgh/govready_apps
+  category: Draft
   description:
-    short: |
-      Use this if you are bulding a system from scratch
+    long: >
+      Edit this Markdown file to provide a long description of your compliance app.
+      The contents of this file will be displayed in the GovReady-Q Compliance Apps
+      Catalog.
+    short: A system for ISM compliance
+  source_url: ~
+  status: stub
+  title: Default ISM System
+  vendor: GovReady
+  vendor_url: ~
+  version: 0.1.0
 questions:
-- id: q1
-  title: Communications Security?
-  prompt: Are you using your own cabling?
-  type: choice
-  choices:
-    - key: true
-      text: Yes
-    - key: false
-      text: True
+- id: register
+  title: System Registration
+  type: module
+  module-id: register
+- id: assess
+  title: Assess System
+  type: module
+  module-id: assess
